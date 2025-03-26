@@ -13,4 +13,3 @@ This example demonstrates how to use the [@botpress/chat SDK](https://www.npmjs.
 3. Create a local .env.local file with a webhook Id: `NEXT_PUBLIC_WEBHOOK_ID=<YOUR WEBHOOK ID>`
 4. Run a local server: `npm run dev`
 5. Deploy, e.g. to Vercel to run (don't forget to set the enn variables)
-
