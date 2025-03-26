@@ -1,41 +1,16 @@
-# Vercel AI SDK useChat with Attachments Example
+# Quick Implementation of the @botpress/chat SDK which uses the Botpress Chat API
 
-This example demonstrates how to use the [Vercel AI SDK](https://sdk.vercel.ai/docs) with [Next.js](https://nextjs.org/) with the `useChat` hook to create a chat interface that can send and receive multi-modal messages from the AI provider of your choice.
+This example demonstrates how to use the [@botpress/chat SDK](https://www.npmjs.com/package/@botpress/chat?ajs_aid=%24device%3A50f4e983-ecf7-45ec-a8a7-8a876f83bfa2) with [Next.js](https://nextjs.org/). It follows the documention with minimal changes:
 
-## Deploy your own
+- uses app state variables instead of constants to store client, conversation, and listener
+- sends messages on demand, not just once
+- collects all sent and received messages and displays them in real-time
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-preview-attachments&env=OPENAI_API_KEY&envDescription=API%20keys%20needed%20for%20application&envLink=platform.openai.com)
+## Getting started
 
-## How to use
-
-Run [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example https://github.com/vercel-labs/ai-sdk-preview-attachments ai-sdk-preview-attachments-example
-```
-
-```bash
-yarn create next-app --example https://github.com/vercel-labs/ai-sdk-preview-attachments ai-sdk-preview-attachments-example
-```
-
-```bash
-pnpm create next-app --example https://github.com/vercel-labs/ai-sdk-preview-attachments ai-sdk-preview-attachments-example
-```
-
-To run the example locally you need to:
-
-1. Sign up for accounts with the AI providers you want to use (e.g., OpenAI, Anthropic).
-2. Obtain API keys for each provider.
-3. Set the required environment variables as shown in the `.env.example` file, but in a new file called `.env`.
-4. `npm install` to install the required dependencies.
-5. `npm run dev` to launch the development server.
-
-
-## Learn More
-
-To learn more about Vercel AI SDK or Next.js take a look at the following resources:
-
-- [Vercel AI SDK docs](https://sdk.vercel.ai/docs)
-- [Vercel AI Playground](https://play.vercel.ai)
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+1. Clone the repository
+2. Run `npm install`
+3. Create a local .env.local file with a webhook Id: `NEXT_PUBLIC_WEBHOOK_ID=<YOUR WEBHOOK ID>`
+4. Run a local server: `npm run dev`
+5. Deploy, e.g. to Vercel to run (don't forget to set the enn variables)
 
